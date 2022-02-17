@@ -19,14 +19,15 @@
 \date{2020年MM月DD日}
 
 \begin{document}
-
+\pagenumbering{roman}
 \maketitle
 
 \tableofcontents
 
 \chapter{はじめに} \label{chap:introduction}
+\pagenumbering{arabic}
 
-「はじめに」もしくは「緒言」では、研究背景、目的、そして論文の構成を書く。
+「はじめに」もしくは「緒言」では、研究背景、目的、そして論文の構成を書く。第一章の前に目次をつける場合、目次のページ番号はi, ii,とローマ数字にして、本文からアラビア数字にするのが一般的だ。それを実現するため、\verb|\begin{document}|の直後にページ番号をローマ数字にするコマンド\verb|\pagenumbering{roman}|が、最初の\verb|\chapter|の後にアラビア数字にするコマンド\verb|\pagenumbering{arabic}|が挿入されている。
 
 \section{研究の背景}
 
