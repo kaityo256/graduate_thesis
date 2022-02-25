@@ -1,7 +1,7 @@
 \documentclass[titlepage]{jsreport}
 
 \usepackage[dvipdfmx]{graphicx}
-\usepackage{listings}
+\usepackage{listings, jlisting}
 \usepackage{cite}
 \usepackage{url}
 
@@ -57,7 +57,7 @@
 
 BibTeXでは、参考文献を「エントリ」と呼ばれる構造で管理する。エントリにはいくつか種別があるが、良く使うのは書籍(book)、論文(article)、プロシーディング(inproceedings)などであろう。例えば書籍は以下のようなエントリとする。
 
-\begin{lstlisting}[language=TeX]
+\begin{lstlisting}[language={[LaTeX]TeX}]
 @book{okumura2020,
     author    = {奥村 晴彦 and 黒木 裕介},
     title     = {LaTeX2ε美文書作成入門},
@@ -104,7 +104,7 @@ GitHubのサイトなど、やむを得ずURLを引用する場合には、bibit
 
 図は、数が多くなければとりえあずfigといったディレクトリにまとめて入れておくと良いだろう。数が増えてきて管理が難しくなったら節ごとにわけるなど工夫すること。画像ファイルは原則としてPDFにすること。例えば\verb|temperature.pdf|を入れたいなら、
 
-\begin{lstlisting}[language=TeX]
+\begin{lstlisting}[language={[LaTeX]TeX}]
     \begin{figure}[htbp]
         \begin{center}
             \includegraphics[width=10cm]{fig/temperature.pdf}
