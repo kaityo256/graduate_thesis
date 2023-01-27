@@ -33,7 +33,7 @@ captionpos=t
 \begin{document}
 \pagenumbering{roman}
 \maketitle
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{2}
 \tableofcontents
 
 \chapter{はじめに} \label{chap:introduction}
@@ -60,6 +60,8 @@ captionpos=t
 \chapter{手法} \label{chap:method}
 
 \section{引用の仕方}
+
+\subsection{論文や書籍の引用}
 
 原則として科学技術論文では、引用のない文章は「著者のオリジナル」であるとみなされる。LAMMPSなどのツールを使えばその関連論文を、手法の説明をするならその手法を提案した論文を引用しなければならない。
 
@@ -89,6 +91,7 @@ BibTeXでは、参考文献を「エントリ」と呼ばれる構造で管理�
     本論文の執筆にあたり、LaTeXの書き方については奥村・黒木の書籍を参考にした\cite{okumura2020}。
 \end{quotation}
 
+\subsection{URLの引用}
 
 GitHubのサイトなど、やむを得ずURLを引用する場合には、bibitemのmiscを使って以下のようにする。
 
