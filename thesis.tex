@@ -1,32 +1,26 @@
 \documentclass[titlepage]{jsreport}
 
 \usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
 \usepackage{listings, jlisting}
 \usepackage{cite}
 \usepackage{url}
 
 % ソースコードを挿入するための設定
-\usepackage[dvipdfmx]{color}
-\definecolor{OliveGreen}{rgb}{0.0,0.6,0.0}
-\definecolor{Magenta}{cmyk}{0, 1, 0, 0}
-\definecolor{colFunc}{rgb}{1,0.07,0.54}
-\definecolor{CadetBlue}{cmyk}{0.62,0.57,0.23,0}
-\definecolor{Brown}{cmyk}{0,0.81,1,0.60}
-\definecolor{colID}{rgb}{0.63,0.44,0}
 \lstset{
-language={Matlab},                   %言語の指定
-basicstyle={\ttfamily\small},        %書体の指定
-backgroundcolor={\color[gray]{.95}}, %背景色と透過度
-keywordstyle={\color{blue}},         %キーワード(int, ifなど)の書体指定
-commentstyle={\color{OliveGreen}},   %注釈の書体 
-stringstyle=\color{Magenta},         %文字列
-frame=single,                        %枠縁(leftline，topline，bottomline，lines，trBL，shadowbox, single)
-numbers=left,                        %行番号表示
-numberstyle={\ttfamily\small},       %行番号の書体指定
-breaklines=true,                     %折り返し(自動改行)
-breakindent = 10pt,                  %自動改行後のインデント量(デフォルトでは20[pt])	
-tabsize=2,                           %タブの大きさ
-captionpos=t                         %キャプションの場所(t,b : "tb"ならば上下両方に記載)
+language={Python},
+basicstyle={\ttfamily\small},
+backgroundcolor={\color[gray]{.95}},
+keywordstyle={\color[rgb]{0.0,0.0,0.8}},
+commentstyle={\color[rgb]{0.5,0.5,0.5}},
+stringstyle={\color[rgb]{0.0,0.5,0.5}},
+frame=single,
+numbers=left,
+numberstyle={\ttfamily\small},
+breaklines=true,
+breakindent = 10pt,
+tabsize=2,
+captionpos=t
 }
 
 \title{卒業論文のタイトル}
