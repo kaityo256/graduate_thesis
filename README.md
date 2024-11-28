@@ -13,7 +13,20 @@
 
 ## 使い方
 
-Forkやcloneをせず、「ダウンロード」して使うこと。リポジトリの「Code」ボタンの「Download ZIP」をクリックすることでZipファイルがダウンロードできる。その上でローカルでGit管理し、さらにGitHub等でプライベートリポジトリとして管理することを強く推奨する。
+HTTPSでクローンして、リポジトリを初期化し、新たにリポジトリを作る。
+
+```sh
+cd
+cd github
+git clone https://github.com/kaityo256/graduate_thesis.git
+cd graduate_thesis
+rm -rf .git
+git init
+git add .
+git commit -m ":tada: initial commit"
+```
+
+さらにGitHub等でプライベートリポジトリとして管理することを強く推奨する。
 
 ## コンパイル方法
 
