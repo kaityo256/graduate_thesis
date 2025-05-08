@@ -65,15 +65,45 @@ captionpos=t
 
 \section{引用の仕方}
 
-\subsection{論文や書籍の引用}
+\subsection{論文の引用}
 
 原則として科学技術論文では、引用のない文章は「著者のオリジナル」であるとみなされる。LAMMPSなどのツールを使えばその関連論文を、手法の説明をするならその手法を提案した論文を引用しなければならない。
 
 引用するのは、原則として書籍か査読論文とし、ウェブサイトの引用はさけること。特に何かの説明の参照先としてWikipediaやSlideShareなどを挙げないこと。機械学習の論文であればプレプリント(arXiv)を読むことも多いと思われるが、引用したくなるような論文はどこかのカンファレンスに採択されていることが多いので、そちらを引用すること。たとえ自分がWikipediaで知識を得たとしても、Wikipediaで引用されている文献にあたり、書籍なり論文なりを参考にすること。
 
-参考文献は、原則としてBibTeXで管理すること。これにより、「本文で参照されていない文献を参考文献に入れてはならない」「本文で参照される順番に並べないとならない」などのルールが自動的に満たされる。
+参考文献は、原則としてBibTeXで管理する。これにより、「本文で参照されていない文献を参考文献に入れてはならない」「本文で参照される順番に並べないとならない」などのルールが自動的に満たされる。
 
-BibTeXでは、参考文献を「エントリ」と呼ばれる構造で管理する。エントリにはいくつか種別があるが、良く使うのは書籍(book)、論文(article)、プロシーディング(inproceedings)などであろう。例えば書籍は以下のようなエントリとする。
+BibTeXでは、参考文献を「エントリ」と呼ばれる構造で管理する。エントリにはいくつか種別(エントリタイプ)があるが、良く使うのは書籍(book)、論文(article)、プロシーディング(inproceedings)などであろう。
+
+例えば論文は\verb|@article|を使う。以下のようなエントリを用意しよう。
+
+\begin{lstlisting}[language={[LaTeX]TeX}]
+@article{Watanabe2012,
+    author = {Watanabe, Hiroshi and Ito, Nobuyasu and Hu, Chin-Kun},
+    title = {Phase diagram and universality of the Lennard-Jones gas-liquid system},
+    journal = {The Journal of Chemical Physics},
+    volume = {136},
+    pages = {204102},
+    year = {2012}
+}
+\end{lstlisting}
+
+これをTeXファイル中で以下のように引用する。
+
+\begin{verbatim}
+分子動力学法によりLennard-Jones原子の相図が調べられた\cite{Watanabe2012}。
+\end{verbatim}
+
+これは以下のようにタイプセットされる。
+\begin{quotation}
+    分子動力学法によりLennard-Jones原子の相図が調べられた\cite{Watanabe2012}。
+\end{quotation}
+
+雑誌のウェブサイトからその論文のBiBTeXエントリがダウンロード可能であることが多く、手で作成する必要はほとんどない。
+
+\subsection{書籍の引用}
+
+書籍は以下のように\verb|@book|を使う。
 
 \begin{lstlisting}[language={[LaTeX]TeX}]
 @book{okumura2020,
